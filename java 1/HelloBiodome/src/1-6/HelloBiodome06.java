@@ -1,4 +1,4 @@
-public class HelloBiodome06 {
+﻿public class HelloBiodome06 {
     public static void main(String[] args){
         try{
             String[] dna1 = args[0].split("");
