@@ -8,23 +8,23 @@ public class HelloBiodome02 {
             double sum = energy1+energy2+energy3;
 
             if(energy1<0){
-                System.out.println("À½¼öÀÔ´Ï´Ù.");
+                System.out.println("ìŒìˆ˜ìž…ë‹ˆë‹¤.");
                 return;
             }
             if(energy2<0){
-                System.out.println("À½¼öÀÔ´Ï´Ù.");
+                System.out.println("ìŒìˆ˜ìž…ë‹ˆë‹¤.");
                 return;
             }
             if(energy3<0){
-                System.out.println("À½¼öÀÔ´Ï´Ù.");
+                System.out.println("ìŒìˆ˜ìž…ë‹ˆë‹¤.");
                 return;
             }
 
-            System.out.println("ÃÑ ¿¡³ÊÁö »ç¿ë·®Àº " + (int)sum +"ÀÔ´Ï´Ù.");
-            System.out.printf("ÅÂ¾ç±¤ %.7f%%, Ç³·Â %.7f%%, Áö¿­ %.7f%%",(energy1/sum*100),(energy2/sum*100),(energy3/sum*100));
+            System.out.println("ì´ ì—ë„ˆì§€ ì‚¬ìš©ëŸ‰ì€ " + (int)sum +"ìž…ë‹ˆë‹¤.");
+            System.out.printf("íƒœì–‘ê´‘ %.7f%%, í’ë ¥ %.7f%%, ì§€ì—´ %.7f%%",(energy1/sum*100),(energy2/sum*100),(energy3/sum*100));
         } catch (Exception e)
         {
-            System.out.println("¿¡·¯!");
+            System.out.println("ì—ëŸ¬!");
         }
     }
 }
