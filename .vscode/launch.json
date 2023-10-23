@@ -15,7 +15,9 @@
             "name": "HelloBiodome01",
             "request": "launch",
             "mainClass": "HelloBiodome01",
-            "projectName": "vsc_codes_java_Project-X_7174d3d3"
+            "projectName": "vsc_codes_java_Project-X_7174d3d3",
+            "args": "아돌프 블레인 찰스 데이비드 얼 프레더릭",
+            "encoding": "UTF-8"
         },
         {
             "type": "java",
