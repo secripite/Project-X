@@ -3,11 +3,26 @@ public class HelloBiodome07 {
         try {
             String DNA = new String(args[0]);
 
+            DNA = dna_sum(args, DNA);
+
             String say = dna_zip(DNA);
 
             System.out.println(say);
         } catch (Exception e) {
             System.out.println("염기서열이 입력되지 않았습니다.");
+        }
+    }
+
+    public static String dna_sum(String[] DNA_with_space, String DNA_sum) {
+        DNA_sum = "";
+        for(int i=0;;i++){
+            try {
+                DNA_sum += DNA_with_space[i];
+                DNA_sum += " ";
+            } catch (Exception e) {
+                DNA_sum = DNA_sum.substring(0, DNA_sum.length() - 1);
+                return DNA_sum;
+            }
         }
     }
 
@@ -25,7 +40,10 @@ public class HelloBiodome07 {
             }
 
             if (DNA.charAt(i) == ' ') {
-                result += ' ';
+                result += temp;
+                result += cnt;
+                result += " ";
+                i++;
                 temp = DNA.charAt(i);
                 cnt = 0;
             } else if (DNA.charAt(i) != temp) {
