@@ -46,6 +46,15 @@
             "projectName": "vsc_codes_java_Project-X_7174d3d3",
             "args": "sww29 spp29",
             "encoding": "UTF-8"
+        },
+        {
+            "type": "java",
+            "name": "HelloBiodome07",
+            "request": "launch",
+            "mainClass": "HelloBiodome07",
+            "projectName": "vsc_codes_java_Project-X_7174d3d3",
+            "args": "JJJCCCEEHHYYYEEEEE",
+            "encoding": "UTF-8"
         }
     ]
 }
