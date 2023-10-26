@@ -1,10 +1,11 @@
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.regex.Pattern;
 
 public class HelloBiodome08 {
     private static final String[] DICTIONARY = { "hello", "where", "this", "biodome", "help", "tree", "new", "is", "problem", "please",
             "need", "we", "isn’t", "there", "a", "your", "any", "thanks", "the", "for", "solution", "can", "?","you"};
-
+    private static final String[] DICTIONARY_KOR = {"안녕하세요", "새로운", "나무를", "발견했습니다", "신속한", "지원", "감사합니다", "당신의", "신속한", "도움이", "필요합니다"};
     public static void main(String[] args) {
         try {
             String no_space_sent = new String(args[0]);
@@ -81,16 +82,30 @@ public class HelloBiodome08 {
     }
 
     private static int isWordInDictionary(String word, int flag) {
-        Arrays.sort(DICTIONARY, Comparator.comparing(String::length).reversed());
-        for (String dictWord : DICTIONARY) {
-            if (dictWord.startsWith(word) && flag == 0) {
-                return 2;
+        if (Pattern.matches("^[a-zA-Z]*$", word)) {
+            Arrays.sort(DICTIONARY, Comparator.comparing(String::length).reversed());
+            for (String dictWord : DICTIONARY) {
+                if (dictWord.startsWith(word) && flag == 0) {
+                    return 2;
+                }
+                if (dictWord.equals(word) && flag == 1) {
+                    return 1;
+                }
             }
-            if (dictWord.equals(word) && flag == 1) {
-                return 1;
-            }
+            return 0;
         }
-        return 0;
+        else {
+            Arrays.sort(DICTIONARY_KOR, Comparator.comparing(String::length).reversed());
+            for (String dictWord : DICTIONARY_KOR) {
+                if (dictWord.startsWith(word) && flag == 0) {
+                    return 2;
+                }
+                if (dictWord.equals(word) && flag == 1) {
+                    return 1;
+                }
+            }
+            return 0;
+        }
     }
 
     public static StringBuilder formatSentence(StringBuilder sentence) {
