@@ -13,6 +13,13 @@ public class RoadToBiodome02 {
                 push(' ');
             }
             pop();
+            if (isPalindrome()) {
+                System.out.println("Palindrome!");
+                for (int i = 0; i < top; i++) {
+                    System.out.print(stack[i]);
+                }
+                return;
+            }
             while (!isEmpty()) {
                 System.out.print(pop());
             }
@@ -21,6 +28,13 @@ public class RoadToBiodome02 {
         }
     }
 
+    public static boolean isPalindrome() {
+        for (int i = 0; i < top / 2; i++) {
+            if (stack[i] != stack[top - i - 1])
+                return false;
+        }
+        return true;
+    }
     public static void push(char alpa) {
         stack[top] = alpa;
         top++;
