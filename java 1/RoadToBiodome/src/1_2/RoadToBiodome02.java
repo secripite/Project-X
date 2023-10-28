@@ -14,7 +14,7 @@ public class RoadToBiodome02 {
             }
             pop();
             if (isPalindrome()) {
-                System.out.println("Palindrome!");
+                System.out.println("Bonus Palindrome!");
                 for (int i = 0; i < top; i++) {
                     System.out.print(stack[i]);
                 }
