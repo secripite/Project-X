@@ -1,34 +1,58 @@
 public class RoadToBiodome05 {
-    public static void main(String[] args) {
+   public static void main(String[] args) {
+      try {
+         int[] water_level = new int[args.length];
 
-    }
-    private static void quickSort(int[] arr) { // Äü Á¤·Ä ÇÔ¼ö
-        quickSort(arr, 0, arr.length-1); // Àç±Í ÇÔ¼ö È£Ãâ
-     }
-     
-     private static void quickSort(int[] arr, int start, int end) {
-        int ls = partition(arr, start, end); // ºÐÇÒµÈ ¿À¸¥ÂÊ ÆÄÆ®ÀÇ ½ÃÀÛ °ª
-  
-        if(start < ls-1) quickSort(arr, start, ls-1); // ¿ÞÂÊ¿¡ Á¤·ÄÇÒ °ÍÀÌ ³²¾Ò´Ù¸é Àç±Í È£Ãâ
-        if(ls < end) quickSort(arr, ls, end); // ¿À¸¥ÂÊ¿¡ Á¤·ÄÇÒ °ÍÀÌ ³²¾Ò´Ù¸é Àç±Í È£Ãâ
-        
-     }
-     
-     private static int partition(int[] arr, int start, int end) {
-        int pivot = arr[(start+end)/2]; // ¹è¿­ÀÇ Áß°£ ¼ö¸¦ pivotÀ¸·Î µÒ
-        
-        while(start <= end) {
-           while(arr[start] < pivot) start++; // pivot º¸´Ù Å«¼ö°¡ ³ª¿Ã ¶§±îÁö Å½»ö
-           while(pivot < arr[end]) end--; // pivot º¸´Ù ÀÛÀº ¼ö°¡ ³ª¿Ã ¶§±îÁö Å½»ö
-           
-           if(start <= end) swap(arr, start++, end--); // µÎ ¼ö¸¦ ±³È¯
-        }
-        return start; // »õ·Î ³ª´­ ¿À¸¥ÂÊ ÆÄÆ¼¼ÇÀÇ ½ÃÀÛ°ª ¹ÝÈ¯
-     }
-     
-     private static void swap(int[] arr, int start, int end) { // ¿ä¼Ò ±³È¯ ÇÔ¼ö
-        int tmp = arr[start];
-        arr[start] = arr[end];
-        arr[end] = tmp;
-     }
+         for (int i = 0; i < args.length; i++) {
+            if (args[i].contains("["))
+               water_level[i] = Integer.parseInt(args[i].substring(1, args[i].length() - 1));
+            else
+               water_level[i] = Integer.parseInt(args[i].substring(0, args[i].length() - 1));
+         }
+         quickSort(water_level);
+
+         System.out.print("[");
+
+         for (int i = 0; i < water_level.length - 1; i++)
+            System.out.print(water_level[i] + ", ");
+
+         System.out.print(water_level[water_level.length - 1] + "]");
+
+      } catch (Exception e) {
+         System.out.println("ìž…ë ¥ëœ ê°’ì´ ì˜¬ë°”ë¥´ì§€ ì•ŠìŠµë‹ˆë‹¤.");
+      }
+   }
+   
+   public static void quickSort(int[] arr) { // í€µ ì •ë ¬ í•¨ìˆ˜
+      quickSort(arr, 0, arr.length - 1); // ìž¬ê·€ í•¨ìˆ˜ í˜¸ì¶œ
+   }
+   
+   public static void quickSort(int[] arr, int start, int end) {
+      int ls = partition(arr, start, end); // ë¶„í• ëœ ì˜¤ë¥¸ìª½ íŒŒíŠ¸ì˜ ì‹œìž‘ ê°’
+      if (start < ls - 1)
+         quickSort(arr, start, ls - 1); // ì™¼ìª½ì— ì •ë ¬í•  ê²ƒì´ ë‚¨ì•˜ë‹¤ë©´ ìž¬ê·€ í˜¸ì¶œ
+      if (ls < end)
+         quickSort(arr, ls, end); // ì˜¤ë¥¸ìª½ì— ì •ë ¬í•  ê²ƒì´ ë‚¨ì•˜ë‹¤ë©´ ìž¬ê·€ í˜¸ì¶œ
+   }
+   
+   
+   public static int partition(int[] arr, int start, int end) {
+      int pivot = arr[(start + end) / 2]; // ë°°ì—´ì˜ ì¤‘ê°„ ìˆ˜ë¥¼ pivotìœ¼ë¡œ ë‘ 
+      while (start <= end) {
+         while (arr[start] < pivot)
+            start++; // pivot ë³´ë‹¤ í°ìˆ˜ê°€ ë‚˜ì˜¬ ë•Œê¹Œì§€ íƒìƒ‰
+         while (pivot < arr[end])
+            end--; // pivot ë³´ë‹¤ ìž‘ì€ ìˆ˜ê°€ ë‚˜ì˜¬ ë•Œê¹Œì§€ íƒìƒ‰
+         if (start <= end)
+            swap(arr, start++, end--); // ë‘ ìˆ˜ë¥¼ êµí™˜
+      }
+      return start; // ìƒˆë¡œ ë‚˜ëˆŒ ì˜¤ë¥¸ìª½ íŒŒí‹°ì…˜ì˜ ì‹œìž‘ê°’ ë°˜í™˜
+   }
+   
+   public static void swap(int[] arr, int start, int end) { // ìš”ì†Œ êµí™˜ í•¨ìˆ˜
+      int tmp = arr[start];
+      arr[start] = arr[end];
+      arr[end] = tmp;
+   }
+
 }
