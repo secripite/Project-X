@@ -8,6 +8,10 @@ public class RoadToBiodome05 {
                water_level[i] = Integer.parseInt(args[i].substring(1, args[i].length() - 1));
             else
                water_level[i] = Integer.parseInt(args[i].substring(0, args[i].length() - 1));
+            if (water_level[i] < 0 || water_level[i] > 100) {
+               System.out.println("입력된 값이 올바르지 않습니다.");
+               return;
+            }
          }
          quickSort(water_level);
 
