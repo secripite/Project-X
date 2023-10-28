@@ -20,7 +20,8 @@ public class HelloBiodome02 {
                 return;
             }
 
-            System.out.println("총 에너지 사용량은 " + (int)sum +"입니다.");
+            System.out.println("총 에너지 사용량은 " + (int) sum + "입니다.");
+            System.out.println("Bonus");
             System.out.printf("태양광 %.7f%%, 풍력 %.7f%%, 지열 %.7f%%",(energy1/sum*100),(energy2/sum*100),(energy3/sum*100));
         } catch (Exception e)
         {

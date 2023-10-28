@@ -8,9 +8,11 @@ public class HelloBiodome03 {
             double rut_Humi = cal_sqrt(cal_near_val(humi,1.0),0,humi);
             double absol = absolute_humi_Temp(rut_Humi,temp);
 
-            double H = cal_H_val(absol,oxi);
-
-            System.out.printf("생명지수 H = %.2f",H);
+            double H = cal_H_val(absol, oxi);
+            
+            System.out.println("생명지수 H = %f", H);
+            System.out.println("Bonus");
+            System.out.printf("생명지수 H = %.2f", H);
 
         }catch (Exception e)
         {

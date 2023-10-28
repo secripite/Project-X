@@ -95,6 +95,7 @@ public class HelloBiodome08 {
             return 0;
         }
         else {
+            System.out.println("Bonus");
             Arrays.sort(DICTIONARY_KOR, Comparator.comparing(String::length).reversed());
             for (String dictWord : DICTIONARY_KOR) {
                 if (dictWord.startsWith(word) && flag == 0) {

@@ -22,7 +22,7 @@ public class HelloBiodome04 {
             double absol = absolute_humi_Temp(rut_Humi,temp);
 
             double H = cal_H_val(absol,oxi);
-
+            System.out.println("Bonus");
             System.out.printf("건강지수는 %.2f입니다.",H);
         }
         catch (Exception e){

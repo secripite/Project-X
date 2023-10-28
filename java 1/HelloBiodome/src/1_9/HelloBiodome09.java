@@ -8,7 +8,7 @@ public class HelloBiodome09 {
                 return;
             }
             printTree_no_pillar(height);
-            System.out.println("");
+            System.out.println("Bonus");
             printTree(height, pillar);
         } catch (Exception e) {
             System.out.println("잘못된 입력입니다. 3~100 사이의 숫자를 입력하세요.");

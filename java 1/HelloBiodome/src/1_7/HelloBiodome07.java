@@ -10,6 +10,7 @@ public class HelloBiodome07 {
             String say = new String(dna_zip(DNA_space)).toUpperCase();
 
             System.out.println(say1);
+            System.out.println("Bonus");
             System.out.println(say); //bonus
         } catch (Exception e) {
             System.out.println("염기서열이 입력되지 않았습니다.");

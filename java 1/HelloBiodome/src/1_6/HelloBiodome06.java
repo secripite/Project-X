@@ -19,7 +19,11 @@ public class HelloBiodome06 {
             else if (flag == 1 && who == 2) {
                 System.out.println("일치하지 않습니다.");
             }
-            else if (flag == 10) {
+            else if(who != 2){
+                System.out.println("일치하지 않습니다.");
+            }
+            System.out.println("Bonus");
+            if (flag == 10) {
                 System.out.println("부분적으로 포함됩니다.");
             }
             else if (flag == 1) {
