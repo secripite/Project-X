@@ -7,6 +7,6 @@ public class Fish extends Animal {
     }
 
     public void swim() {
-        System.out.println(name + "(Àº)´Â " + finsCount + "°³ÀÇ Áö´À·¯¹Ì·Î Çì¾öÄ§.");
+        System.out.println(name + "(ì€)ëŠ” " + finsCount + "ê°œì˜ ì§€ëŠëŸ¬ë¯¸ë¡œ í—¤ì—„ì¹¨.");
     }
 }

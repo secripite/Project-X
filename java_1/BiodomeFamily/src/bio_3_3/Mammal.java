@@ -7,13 +7,13 @@ public class Mammal extends Animal {
     }
 
     public void giveBirth() {
-        System.out.print(name + "(Àº)´Â ");
+        System.out.print(name + "(ì€)ëŠ” ");
         if(warmBlood){
-            System.out.print("¿ÂÇ÷");
+            System.out.print("ì˜¨í˜ˆ");
         }
         else {
-            System.out.print("³ÃÇ÷");
+            System.out.print("ëƒ‰í˜ˆ");
         }
-        System.out.println(" Æ÷À¯ µ¿¹°·Î ÅÂ¾î³µÀ½.");
+        System.out.println(" í¬ìœ  ë™ë¬¼ë¡œ íƒœì–´ë‚¬ìŒ.");
     }
 }
